@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://character/assets/character.png" type="Texture" id=1]
 [ext_resource path="res://character/Character.gd" type="Script" id=2]
 
-[node name="Character" type="Node2D"]
+[sub_resource type="CircleShape2D" id=1]
+radius = 5.80952
+
+[node name="Character" type="Area2D"]
+collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.043251, 3.11406 )
+shape = SubResource( 1 )
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

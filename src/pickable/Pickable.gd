@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 
 # Declare member variables here. Examples:
@@ -14,5 +14,3 @@ var speed = 40
 func _process(delta):
 	position.y += speed * delta
 
-	if position.y >= 200:
-		queue_free()
