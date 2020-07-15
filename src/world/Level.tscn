@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://world/assets/ground.png" type="Texture" id=1]
 [ext_resource path="res://character/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://thrower/Thrower.tscn" type="PackedScene" id=3]
 
 [node name="Level" type="Node2D"]
 
@@ -20,3 +21,6 @@ centered = false
 
 [node name="Character" parent="." instance=ExtResource( 2 )]
 position = Vector2( 80, 116 )
+
+[node name="Thrower" parent="." instance=ExtResource( 3 )]
+position = Vector2( 80, 32 )
