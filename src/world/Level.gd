@@ -24,4 +24,4 @@ func _on_Ground_area_entered(area):
 func _on_Character_item_picked(pickable):
 	pickable.queue_free()
 	score += 1
-	$IconCounter.set_value(score)
+	$IconCounter.value = score

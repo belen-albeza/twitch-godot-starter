@@ -14,4 +14,5 @@ func _process(delta):
 
 
 func _on_area_entered(area):
+	$PickupSfx.play()
 	emit_signal("item_picked", area)
