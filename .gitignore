@@ -10,4 +10,5 @@ data_*/
 
 # Project ignore settings
 .DS_Store
-./assets
+/assets/
+
